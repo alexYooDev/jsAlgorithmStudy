@@ -5,4 +5,4 @@ function solution(n) {
   }
   return answer
 }
-console.log(solution(6))
+console.log(solution(10))
