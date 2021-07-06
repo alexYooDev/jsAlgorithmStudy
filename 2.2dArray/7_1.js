@@ -1,17 +1,13 @@
 function solution(arr) {
   let answer = 0;
   let n = arr.length;
-  // 상하좌우를 탐색하기 위한 배열설정
-  let dx = [-1, 1, 0, 0];
-  let dy = [0, 0, -1, 1];
-
+  let dx = [0, 0, -1, 1];
+  let dy = [-1, 1, 0, 0];
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
       let flag = 1;
       for (let k = 0; k < 4; k++) {
-        //좌우 행 좌표
         let nx = i + dx[k];
-        //상하 열 좌표
         let ny = j + dy[k];
         if (
           nx >= 0 &&
@@ -24,6 +20,7 @@ function solution(arr) {
           break;
         }
       }
+      //
       if (flag) answer++;
     }
   }
